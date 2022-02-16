@@ -1,0 +1,26 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "my second project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexeilozhkin/frontend-project-lvl2.git"
+  },
+  "author": "alexeilozhkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexeilozhkin/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/alexeilozhkin/frontend-project-lvl2#readme",
+  "type": "module",
+  "dependencies": {
+    "commander": "^9.0.0"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  }
+}
