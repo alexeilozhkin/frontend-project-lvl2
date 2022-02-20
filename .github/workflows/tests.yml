@@ -1,0 +1,25 @@
+name: linter-check
+on: push
+jobs:
+  linter-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: install
+        run: |
+          make install
+     
+      - name: run Linter
+        run: |
+          make lint
+
+      - name: Test & publish code coverage
+
+        uses: paambaati/codeclimate-action@v2.7.4
+
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make test-coverage
