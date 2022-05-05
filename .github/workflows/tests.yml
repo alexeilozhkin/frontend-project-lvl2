@@ -1,4 +1,4 @@
-name: linter-check
+name: tests
 on: push
 jobs:
   linter-job:
@@ -20,6 +20,6 @@ jobs:
         uses: paambaati/codeclimate-action@v2.7.4
 
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: 897a56d16c7256ecb16d0f610458d8290e1ef79cbce33a89996804c7bfb77107
         with:
           coverageCommand: make test-coverage
