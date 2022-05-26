@@ -8,6 +8,8 @@ const selectFormat = (diff, format = 'stylish') => {
       return getStylishDiff(diff);
     case 'plain':
       return getPlainDiff(diff);
+    case 'json':
+      return JSON.stringify(diff);
     default:
       throw new Error (`format ${format} is not correct!`);
   }
